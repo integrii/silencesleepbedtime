@@ -1,0 +1,29 @@
+<head>
+
+</head>
+<body>
+<script type="text/javascript">
+	function playAudio(){
+			var randomInt = Math.random();
+			if (randomInt >= 0.3 && randomInt < 0.6){
+				var audio = new Audio('sleep.mp3');
+			} else if (randomInt < 0.3) {
+				var audio = new Audio('bedtime.mp3');
+			} else {
+				var audio = new Audio('silence.mp3');
+			}
+audio.play();
+}
+window.onclick = function() {
+	playAudio();
+		}
+
+
+		document.body.onkeyup = function(e){
+			if(e.keyCode == 32){
+	playAudio();
+				}
+		}
+
+	</script>
+</body>
